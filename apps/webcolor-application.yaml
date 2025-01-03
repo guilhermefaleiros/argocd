@@ -11,6 +11,9 @@ spec:
     repoURL: "https://github.com/guilhermefaleiros/argocd.git"
     path: k8s
     targetRevision: HEAD
+    directory:
+      recurse: true
+      exclude: "nginx/*"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: webcolor
